@@ -1,0 +1,10 @@
+# PHPStan at its highest level, from its pinned image (make sdk-check).
+parameters:
+    level: max
+    phpVersion: 80100
+    paths:
+        - src
+        - tests
+    bootstrapFiles:
+        - tests/bootstrap.php
+        - tests/Assert.php

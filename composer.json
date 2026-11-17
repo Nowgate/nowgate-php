@@ -1,0 +1,30 @@
+{
+  "name": "nowgate/nowgate",
+  "description": "The Nowgate API's PHP SDK: payments, payment links, payouts and refunds, with webhook verification. No dependencies.",
+  "type": "library",
+  "version": "0.1.0",
+  "keywords": ["nowgate", "payments", "crypto", "stablecoins", "webhooks", "sdk"],
+  "homepage": "https://docs.nowgate.io/sdks/php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nowgate",
+      "homepage": "https://nowgate.io"
+    }
+  ],
+  "support": {
+    "docs": "https://docs.nowgate.io/sdks/php",
+    "source": "https://github.com/Nowgate/nowgate-php",
+    "issues": "https://github.com/Nowgate/nowgate-php/issues"
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nowgate\\": "src/"
+    }
+  }
+}
