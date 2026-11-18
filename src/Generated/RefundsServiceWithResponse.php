@@ -28,8 +28,8 @@ final class RefundsServiceWithResponse extends Service
      * it credited (before Nowgate's fee, which Nowgate keeps) less its other refunds. The
      * network fee comes out of the refund unless you pay it (`fee_paid_by: merchant`).
      * Without the payer's `address`, the refund waits in `awaiting_address` with a
-     * `refund_url` you send them, where they give it once. Their address then waits like
-     * any new destination before it is paid: 24 hours in live.
+     * `refund_url` you send them, where they give it once. Their address then becomes a
+     * destination, paid within about a minute.
      *
      * POST /payments/{id}/refunds
      *

@@ -24,7 +24,7 @@ final class PayoutsService extends Service
      * Create a payout
      *
      * Pays an amount of an asset you hold to one of your destinations, given by its ID or by
-     * its address (a new address becomes a destination, and waits). The amount is reserved
+     * its address (a new address becomes a destination). The amount is reserved
      * from your available balance at once. `network_fee` is quoted in the payout's own
      * asset now, as the most the network can take; once the payout is finished it is what
      * the network took, and the rest returns to your balance. By default you pay it on top

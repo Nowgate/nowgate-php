@@ -23,8 +23,8 @@ final class PayoutDestinationsService extends Service
     /**
      * Add a payout destination
      *
-     * An address of yours that payouts can pay. A new destination waits before it can be
-     * paid: 24 hours in live, 5 minutes in the sandbox. `destination.created` reaches your
+     * An address of yours that payouts can pay. A new destination can be paid within about a
+     * minute, once Nowgate's signer has registered it. `destination.created` reaches your
      * webhook endpoint at once, so your own systems can raise an alarm about an address
      * nobody meant to add, and `destination.active` follows when it can be paid. Adding an
      * address you already have returns that destination with `200`.
