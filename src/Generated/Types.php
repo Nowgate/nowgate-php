@@ -24,6 +24,7 @@ namespace Nowgate\Generated;
  * @phpstan-type NetworkStatus array{network: Network, status: 'operational'|'degraded'|'halted'|'unavailable', height?: int, updated_at?: Timestamp}
  * @phpstan-type Asset array{network: Network, network_name: string, asset: AssetSymbol, kind: 'native'|'token', decimals: int, min_amount: Amount, confirmation: string}
  * @phpstan-type AssetList array{object: 'list', data: list<Asset>}
+ * @phpstan-type AcceptedAssets array{object?: 'accepted_assets', assets: list<Pair>}
  * @phpstan-type CreatePaymentRequest array{network: Network, asset: AssetSymbol, amount?: Amount, price_amount?: FiatAmount, price_currency?: string, markup_bps?: int, fee_paid_by?: FeePaidBy, order_id?: string, description?: string, expires_in?: int, metadata?: array<string, string>, webhook_url?: string}
  * @phpstan-type FiatAmount string
  * @phpstan-type FeePaidBy 'merchant'|'payer'
@@ -118,6 +119,7 @@ namespace Nowgate\Generated;
  * @phpstan-type SubscriptionEventBodyData array{object: Subscription}
  * @phpstan-type InvoiceEventBody array{id: EventID, object: 'event', type: string, api_version: string, environment: 'live'|'sandbox'|'dev'|'test', created_at: Timestamp, data: InvoiceEventBodyData}
  * @phpstan-type InvoiceEventBodyData array{object: Invoice}
+ * @phpstan-type SetAcceptedAssetsParams array{object?: 'accepted_assets', assets: list<Pair>}
  * @phpstan-type CreatePaymentLinkParams array{title: string, description?: string, price_amount?: string|int, price_currency?: string, amount?: string|int, network?: Network, asset?: AssetSymbol, open_amount?: OpenAmount, assets?: list<Pair>, markup_bps?: int, fee_paid_by?: FeePaidBy, expires_in?: int, metadata?: array<string, string>, order_id_prefix?: string, branding?: BrandingInput, success_url?: string, cancel_url?: string, receipts?: bool, donations?: Donations}
  * @phpstan-type ListPaymentLinksParams array{limit?: int, starting_after?: PaymentID, ending_before?: PaymentID, status?: PaymentLinkStatus}
  * @phpstan-type UpdatePaymentLinkParams array{status?: PaymentLinkStatus, title?: string, description?: string, price_amount?: string|int, price_currency?: string, amount?: string|int, network?: Network, asset?: AssetSymbol, open_amount?: OpenAmount, assets?: list<Pair>, markup_bps?: int, fee_paid_by?: FeePaidBy, expires_in?: int, metadata?: array<string, string>, order_id_prefix?: string, branding?: BrandingInput, success_url?: string, cancel_url?: string, receipts?: bool, donations?: Donations}
@@ -155,5 +157,5 @@ final class Types
     public const API_VERSION = '2026-11-01';
 
     /** This SDK's version. */
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.2.0';
 }

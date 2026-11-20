@@ -14,6 +14,7 @@ abstract class Services
 {
     public readonly StatusService $status;
     public readonly AssetsService $assets;
+    public readonly AcceptedAssetsService $acceptedAssets;
     public readonly RatesService $rates;
     public readonly PaymentsService $payments;
     public readonly PaymentLinksService $paymentLinks;
@@ -34,6 +35,7 @@ abstract class Services
     {
         $this->status = new StatusService($requester);
         $this->assets = new AssetsService($requester);
+        $this->acceptedAssets = new AcceptedAssetsService($requester);
         $this->rates = new RatesService($requester);
         $this->payments = new PaymentsService($requester);
         $this->paymentLinks = new PaymentLinksService($requester);

@@ -2,7 +2,7 @@
   "name": "nowgate/nowgate",
   "description": "The Nowgate API's PHP SDK: payments, payment links, payouts and refunds, with webhook verification. No dependencies.",
   "type": "library",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": ["nowgate", "payments", "crypto", "stablecoins", "webhooks", "sdk"],
   "homepage": "https://docs.nowgate.io/sdks/php",
   "license": "MIT",

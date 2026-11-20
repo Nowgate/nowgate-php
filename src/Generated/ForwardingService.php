@@ -43,8 +43,7 @@ final class ForwardingService extends Service
      * `payment` mode each payment's credit as it reaches your available balance, in
      * `daily` mode your whole available balance once a day at `hour` UTC. Nothing under
      * `min_amount` is forwarded. Forwarding payouts are ordinary payouts with
-     * `source: forwarding`; the network fee comes out of them (`fee_paid_by: payee`), and
-     * they never wait for approval.
+     * `source: forwarding`; the network fee comes out of them (`fee_paid_by: payee`).
      *
      * PUT /forwarding
      *

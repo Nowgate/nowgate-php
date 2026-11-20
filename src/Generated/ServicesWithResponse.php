@@ -14,6 +14,7 @@ final class ServicesWithResponse
 {
     public readonly StatusServiceWithResponse $status;
     public readonly AssetsServiceWithResponse $assets;
+    public readonly AcceptedAssetsServiceWithResponse $acceptedAssets;
     public readonly RatesServiceWithResponse $rates;
     public readonly PaymentsServiceWithResponse $payments;
     public readonly PaymentLinksServiceWithResponse $paymentLinks;
@@ -34,6 +35,7 @@ final class ServicesWithResponse
     {
         $this->status = new StatusServiceWithResponse($requester);
         $this->assets = new AssetsServiceWithResponse($requester);
+        $this->acceptedAssets = new AcceptedAssetsServiceWithResponse($requester);
         $this->rates = new RatesServiceWithResponse($requester);
         $this->payments = new PaymentsServiceWithResponse($requester);
         $this->paymentLinks = new PaymentLinksServiceWithResponse($requester);
